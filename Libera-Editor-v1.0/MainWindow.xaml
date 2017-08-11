@@ -1,0 +1,33 @@
+﻿<Window x:Class="Libera_Editor_v1._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Libera_Editor_v1._0"
+        mc:Ignorable="d"
+        Title="Libera Editor v1.0" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#EEEEF2">
+            <StackPanel DockPanel.Dock="Top" Name="MenuBar" Height="20" Orientation="Horizontal" Margin="4,4,4,0">
+                    <Menu Background="Transparent">
+                        <MenuItem Header="_File">
+                            <MenuItem Header="_New File" />
+                            <MenuItem Header="_Open" Click="fileOpenButton_Click" />
+                            <MenuItem Header="_Save" Click="fileSaveButton_Click"/>
+                            <MenuItem Header="_Save as..."/>
+                        </MenuItem>
+                        <MenuItem Header="_Tools" >
+                            <MenuItem Header="_NightMode" IsCheckable="True" IsChecked="False" />
+                        </MenuItem>
+                        <MenuItem Header="_Preference">
+                            <MenuItem Header="_Fonts" />
+                            <MenuItem Header="_Key Shortcuts" />
+                            <MenuItem Header="_Themes" />
+                        </MenuItem>
+                    </Menu>
+                </StackPanel>
+            <TextBox Name="textArea" DockPanel.Dock="Right" Margin="4,4,4,4" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                     FontSize="17" Foreground="Black" FontWeight="Bold" Background="White"/>
+        </DockPanel>
+    </Grid>
+</Window>
